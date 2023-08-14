@@ -1,0 +1,10 @@
+<h1>Karaoke Room</h1>
+
+<button routerLink="/">Back to Home</button>
+
+
+<div>
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Unesite ime pesme">
+    <button (click)="performSearch()">Pretraži</button>
+    <app-search *ngIf="videoId" [videoId]="videoId"></app-search>
+</div>
