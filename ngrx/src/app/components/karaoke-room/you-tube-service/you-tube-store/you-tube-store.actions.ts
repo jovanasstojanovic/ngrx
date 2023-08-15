@@ -9,3 +9,8 @@ export const searchSuccessAction = createAction(
   '[Search] Search Success Action',
   props<{ videoId: string }>()
 );
+
+export const searchLoadingAction = createAction('[Search] Search Loading Action');
+
+
+export const searchErrorAction = createAction('[Search] Search Error Action');

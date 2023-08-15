@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/karaoke-room/search/search.component';
 import { YouTubeStoreEffects } from './components/karaoke-room/you-tube-service/you-tube-store/you-tube-store.effects';
 import { HttpClientModule } from '@angular/common/http';
+import { youTubeStoreReducer } from './components/karaoke-room/you-tube-service/you-tube-store/you-tube-store.reducer';
 
 
 
@@ -30,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      videoId:youTubeStoreReducer
+    }),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([YouTubeStoreEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
