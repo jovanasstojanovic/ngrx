@@ -38,4 +38,9 @@ export class YouTubeService {
     );
   }
 
+  getTrendingVideos(): Observable<any> {
+    const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=${this.apiKey}`;
+    return this.http.get(apiUrl);
+  }
+
 }

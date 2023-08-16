@@ -1,2 +1,10 @@
 
 <button (click)="goToKaraokeRoom()">Go to Karaoke Room</button>
+
+<!-- your-component.component.html -->
+<div>
+    <h2>Inspiration: Trending Videos</h2>
+    <ul style="list-style-type: none;">
+        <li *ngFor="let video of trendingVideos;let i = index" >{{ i + 1 }}# {{ video.snippet.title }}</li>
+    </ul>
+</div>

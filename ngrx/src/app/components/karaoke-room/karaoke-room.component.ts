@@ -11,6 +11,8 @@ import { selectVideoId } from './you-tube-service/you-tube-store/you-tube-store.
 })
 export class KaraokeRoomComponent implements OnInit{
 
+  dotsArray = new Array(15);
+  selectedVideos: string[] = [];
 
   constructor(private store: Store<AppState>) {}
 
@@ -42,4 +44,10 @@ export class KaraokeRoomComponent implements OnInit{
     });
   }
 
+
+  handleVideoNameSelected(videoName: string) {
+    // Dodajte naziv videa u listu selektovanih videa
+    this.selectedVideos.push(videoName);
+    // Ovde možete dodati logiku za čuvanje naziva u bazi ili drugi odgovarajući korak
+  }
 }
