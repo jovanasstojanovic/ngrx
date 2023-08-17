@@ -9,7 +9,7 @@ import { YouTubeService } from '../karaoke-room/you-tube-service/you-tube.servic
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-
+    pictures = new Array(8);
    trendingVideos: any[] = [];
 
   constructor( private router: Router, private youTubeService:YouTubeService) {}

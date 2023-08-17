@@ -17,6 +17,7 @@ import { SearchComponent } from './components/karaoke-room/search/search.compone
 import { YouTubeStoreEffects } from './components/karaoke-room/you-tube-service/you-tube-store/you-tube-store.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { youTubeStoreReducer } from './components/karaoke-room/you-tube-service/you-tube-store/you-tube-store.reducer';
+import { videoNamesReducer } from './components/karaoke-room/video-names-store/video-name.reducer';
 
 
 
@@ -32,7 +33,8 @@ import { youTubeStoreReducer } from './components/karaoke-room/you-tube-service/
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      videoId:youTubeStoreReducer
+      videoId:youTubeStoreReducer,
+      videoNames: videoNamesReducer
     }),
     StoreRouterConnectingModule.forRoot(),
     EffectsModule.forRoot([YouTubeStoreEffects]),

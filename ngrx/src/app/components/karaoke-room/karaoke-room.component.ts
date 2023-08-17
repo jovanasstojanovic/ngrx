@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import * as SearchActions from './you-tube-service/you-tube-store/you-tube-store.actions';
 import { AppState } from 'src/app/app.state';
 import { selectVideoId } from './you-tube-service/you-tube-store/you-tube-store.selectors';
+import { YouTubeService } from './you-tube-service/you-tube.service';
+import { addVideoName } from './video-names-store/video-names.actions';
+import { selectVideoNames } from './video-names-store/video-names.selector';
 
 @Component({
   selector: 'app-karaoke-room',
@@ -12,9 +15,10 @@ import { selectVideoId } from './you-tube-service/you-tube-store/you-tube-store.
 export class KaraokeRoomComponent implements OnInit{
 
   dotsArray = new Array(15);
-  selectedVideos: string[] = [];
+  // selectedVideos: string[] = [];
+  // uniqueVideoNames: Set<string> = new Set();
 
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppState>,private youTubeService: YouTubeService) {}
 
   searchQuery: string = '';
   localSearchQuery:string='';
@@ -42,12 +46,31 @@ export class KaraokeRoomComponent implements OnInit{
     this.store.select(state => state.videoId.loading).subscribe(loading => {
       this.loading = loading;
     });
+    // this.store.pipe(select(selectVideoNames)).subscribe(videoNames => {
+    //   this.uniqueVideoNames = new Set(videoNames);
+    //   this.selectedVideos = Array.from(this.uniqueVideoNames).slice(-10); // Prikazujemo poslednjih 10 jedinstvenih imena
+    // });
   }
 
 
   handleVideoNameSelected(videoName: string) {
-    // Dodajte naziv videa u listu selektovanih videa
-    this.selectedVideos.push(videoName);
-    // Ovde možete dodati logiku za čuvanje naziva u bazi ili drugi odgovarajući korak
-  }
+  this.youTubeService.getVideoNameByName(videoName)
+    .then(videoTitle => {
+      if (videoTitle) {
+        this.store.dispatch(addVideoName({ videoName: videoTitle }));
+        // Ovde možete dodati logiku za čuvanje naziva u bazi
+      } else {
+        console.log('Video sa tim nazivom nije pronađen.');
+      }
+    })
+    .catch(error => {
+      console.error('Greška prilikom dohvatanja naziva videa:', error);
+    });
+}
+
+
+
+
+
+
 }

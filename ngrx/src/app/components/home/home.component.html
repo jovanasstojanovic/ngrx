@@ -1,10 +1,48 @@
 
-<button (click)="goToKaraokeRoom()">Go to Karaoke Room</button>
+<!-- 
 
-<!-- your-component.component.html -->
 <div>
     <h2>Inspiration: Trending Videos</h2>
     <ul style="list-style-type: none;">
         <li *ngFor="let video of trendingVideos;let i = index" >{{ i + 1 }}# {{ video.snippet.title }}</li>
     </ul>
+</div> -->
+
+<div class="container">
+    <div class="topList">
+        <ul class="list">
+            <ng-container *ngFor="let video of trendingVideos; let i = index">
+                <li *ngIf="i < 10"><span class="numberSpan">{{ i + 1 }}#</span> {{ video.snippet.title }}</li>
+            </ng-container>
+        </ul>
+    </div>
+
+    <div class="mid">
+        <div class="welcome">
+            <img class="logo" src="../../../assets/mojLogo.png" alt="nesto">
+            <img class="title" src="../../../assets/naziv.png" alt="nesto">
+            <img class="moto" src="../../../assets/moto.png" alt="nesto">
+        </div>
+
+        <div class="getStarted">
+            <button class="buttonGetSinging" (click)="goToKaraokeRoom()">GET SINGING</button>
+        </div>
+
+        <div class="galery">
+            <div class="box">
+            <span *ngFor="let i of pictures; let index = index" [style.--i]="index + 1">
+                <img class="galeryImage" [src]="'../../../assets/galery/img' + (index + 1) + '.jpg'">
+            </span>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="topList">.
+        <ul class="list">
+            <ng-container *ngFor="let video of trendingVideos; let i = index">
+                <li *ngIf="i >= 10"><span class="numberSpan">{{ i + 1 }}#</span> {{ video.snippet.title }}</li>
+            </ng-container>
+        </ul>
+    </div>
 </div>

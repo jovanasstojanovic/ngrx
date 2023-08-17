@@ -19,14 +19,15 @@ export class SearchComponent implements OnInit,OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     if (this.videoId) {
       // Kada se videoId promeni, automatski čuvajte naziv videa
-      this.saveVideoName();
+      this.saveVideoName(this.videoId);
     }
   }
 
-  saveVideoName() {
-    // Emitovanje naziva videa
-    this.videoNameSelected.emit("Naziv videa"); // Postavite stvarni naziv videa
-  }
+  saveVideoName(videoName: string) {
+  // Emitovanje naziva videa
+  this.videoNameSelected.emit(videoName);
+}
+
 
   constructor(private domSanitizer: DomSanitizer)
   {
@@ -35,7 +36,7 @@ export class SearchComponent implements OnInit,OnChanges{
 
   get videoUrl() {
     const url = `https://www.youtube.com/embed/${this.videoId}?fs=1&vq=high&modestbranding=1?autoplay=0&rel=0`;
-    console.log(url);
+
     return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

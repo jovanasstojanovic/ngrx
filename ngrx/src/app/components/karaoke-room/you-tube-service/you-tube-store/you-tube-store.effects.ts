@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { catchError, map, switchMap, concatMap, take } from 'rxjs/operators';
-
 import * as SearchActions from './you-tube-store.actions';
 import { YouTubeService } from '../you-tube.service';
 
@@ -24,6 +23,8 @@ export class YouTubeStoreEffects {
       )
     )
   );
+
+
 
   private searchMultipleVideos(query: string) {
     return this.youtubeService.searchVideos(query, 5).pipe(

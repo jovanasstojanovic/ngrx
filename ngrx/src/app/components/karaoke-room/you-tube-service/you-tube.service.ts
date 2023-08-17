@@ -9,7 +9,7 @@ import { Observable, map } from 'rxjs';
 })
 export class YouTubeService {
   
-  private apiKey: string = 'x';
+  private apiKey: string = 'AIzaSyBirflItHvoACBOXU47WyyVedAXy2HACJw';
 
   constructor(private http: HttpClient) {}
 
@@ -43,4 +43,22 @@ export class YouTubeService {
     return this.http.get(apiUrl);
   }
 
+
+  getVideoNameByName(videoName: string): Promise<string | null> {
+    return new Promise((resolve, reject) => {
+      this.searchVideos(videoName, 1).pipe(
+        map((response: any) => {
+          if (response.items && response.items.length > 0) {
+            return response.items[0].snippet.title;
+          } else {
+            return null;
+          }
+        })
+      ).subscribe(
+        (videoId: string | null) => {
+          resolve(videoId);
+        }
+      );
+    });
+  }
 }
