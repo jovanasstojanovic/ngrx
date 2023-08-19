@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NameSharingService } from '../../service/name-sharing.service';
 import { Router } from '@angular/router';
-import { YouTubeService } from '../karaoke-room/you-tube-service/you-tube.service';
+import { YouTubeService } from '../../services/you-tube-service/you-tube.service';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +8,8 @@ import { YouTubeService } from '../karaoke-room/you-tube-service/you-tube.servic
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-    pictures = new Array(8);
-   trendingVideos: any[] = [];
+  pictures = new Array(8);
+  trendingVideos: any[] = [];
 
   constructor( private router: Router, private youTubeService:YouTubeService) {}
 
@@ -20,14 +19,14 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-        this.getTrendingVideos();
-
+    this.getTrendingVideos();
   }
 
   getTrendingVideos() {
-    this.youTubeService.getTrendingVideos().subscribe((response: any) => {
-      this.trendingVideos = response.items;
-    });
+    this.youTubeService.getTrendingVideos()
+      .subscribe((response: any) => {
+          this.trendingVideos = response.items;
+        }
+      );
   }
-
 }

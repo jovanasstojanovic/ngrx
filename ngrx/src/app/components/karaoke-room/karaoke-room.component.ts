@@ -15,16 +15,13 @@ import { selectVideoNames } from './video-names-store/video-names.selector';
 export class KaraokeRoomComponent implements OnInit{
 
   dotsArray = new Array(15);
-  // selectedVideos: string[] = [];
-  // uniqueVideoNames: Set<string> = new Set();
-
-  constructor(private store: Store<AppState>,private youTubeService: YouTubeService) {}
-
   searchQuery: string = '';
   localSearchQuery:string='';
   videoId: string = '';
   loading: boolean = false;
   error: boolean = false;
+
+  constructor(private store: Store<AppState>,private youTubeService: YouTubeService) {}
 
   performSearch() {
     if (this.searchQuery.trim() !== '') {
@@ -38,7 +35,6 @@ export class KaraokeRoomComponent implements OnInit{
     }
   }
 
-
   ngOnInit() {
      this.store.select(selectVideoId).subscribe(videoId => {
       this.videoId = videoId;
@@ -46,31 +42,19 @@ export class KaraokeRoomComponent implements OnInit{
     this.store.select(state => state.videoId.loading).subscribe(loading => {
       this.loading = loading;
     });
-    // this.store.pipe(select(selectVideoNames)).subscribe(videoNames => {
-    //   this.uniqueVideoNames = new Set(videoNames);
-    //   this.selectedVideos = Array.from(this.uniqueVideoNames).slice(-10); // Prikazujemo poslednjih 10 jedinstvenih imena
-    // });
   }
 
-
   handleVideoNameSelected(videoName: string) {
-  this.youTubeService.getVideoNameByName(videoName)
-    .then(videoTitle => {
-      if (videoTitle) {
-        this.store.dispatch(addVideoName({ videoName: videoTitle }));
-        // Ovde možete dodati logiku za čuvanje naziva u bazi
-      } else {
-        console.log('Video sa tim nazivom nije pronađen.');
-      }
-    })
-    .catch(error => {
-      console.error('Greška prilikom dohvatanja naziva videa:', error);
-    });
-}
-
-
-
-
-
-
+    this.youTubeService.getVideoNameByName(videoName)
+      .then(videoTitle => {
+        if (videoTitle) {
+          this.store.dispatch(addVideoName({ videoName: videoTitle }));
+        } else {
+          console.log('Video sa tim nazivom nije pronađen.');
+        }
+      })
+      .catch(error => {
+        console.error('Greška prilikom dohvatanja naziva videa:', error);
+      });
+  }
 }

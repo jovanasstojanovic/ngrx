@@ -1,18 +1,40 @@
-.container{
-    margin-left: 3vw;
-    margin-top: 5vh;
-    width: 94vw;
-    display: grid;
-    grid-template-columns: 2fr 4fr 2fr;
-    column-gap: 4vw;
+.box {
+    margin-top: 9vh;
+    margin-left: 42%;
+    height: 8vw;
+    width: 8vw;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: animate 35s linear infinite;
 }
 
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(15vw);
+}
 
-.buttonGetSinging{
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+
+}
+
+.buttonGetSinging {
     border: 3px solid white;
     cursor: pointer;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #211836;
     color: white;
     text-decoration: none;
@@ -22,17 +44,79 @@
     padding: 10px 30px;
     transition: 0.5s;
 }
-.buttonGetSinging:hover{
+
+.buttonGetSinging:hover {
     border: 1px solid #00ffe0;
     color: #00ffe0;
     letter-spacing: 0.2em;
     box-shadow: 0 0 20px #00ffe0;
 }
 
+.container {
+    margin-left: 3vw;
+    margin-top: 5vh;
+    width: 94vw;
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    column-gap: 4vw;
+}
+
+.galery {
+    background-color: #34205e;
+}
+
+.galeryImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+}
+
+.getStarted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #211836;
+}
+
 .logo
 {
     width: 9vw;
     
+}
+
+.list {
+    list-style-type: none;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1;
+    padding-inline-start: 0;
+    padding: 5%;
+    color: #00ffe199;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.7vh;
+
+}
+
+.mid {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-rows: 3.5fr 2fr 3.5fr;
+}
+
+.moto {
+    margin-left: 55%;
+    width: 14vw;
+}
+
+.numberSpan {
+    font-size: 1.8vh;
+    font-weight: bolder;
+    color: #00ffe0;
 }
 
 .title{
@@ -46,93 +130,8 @@
     box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.508);
 }
 
-.moto{
-    margin-left: 55%;
-    width: 14vw;
-}
-
-.list{
-    list-style-type: none;
-    height: 100%;
-    display:grid;
-    grid-template-columns: 1;
-    padding-inline-start: 0;
-    padding: 5%;
-    color:#00ffe199;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.7vh;
-   
-}
-
-.numberSpan{
-    font-size: 1.8vh;
-    font-weight: bolder;
-    color: #00ffe0;
-}
-
-.box{
-    margin-top: 9vh;
-    margin-left: 42%;
-    height: 8vw;
-    width: 8vw;
-    position: relative;
-    transform-style: preserve-3d;
-    animation:animate 35s linear infinite;
-}
-
-@keyframes animate {
-    0%{
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100%{
-        transform: perspective(1000px) rotateY(360deg);
-    }
-    
-}
-
-.box span{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*45deg)) translateZ(15vw);
-}
-
-.galeryImage
-{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
-}
-
-.mid{
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
-    display: grid;
-    grid-template-rows: 3.5fr 2fr 3.5fr;
-}
-
 .welcome{
     padding-top: 4%;
     padding-left: 5%;
-background-color: #34205e;
-}
-
-.getStarted{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-background-color: #211836;
-}
-
-.galery
-{
-background-color: #34205e;
+    background-color: #34205e;
 }

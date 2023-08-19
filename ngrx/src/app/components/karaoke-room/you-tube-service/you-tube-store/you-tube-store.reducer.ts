@@ -31,7 +31,7 @@ export const youTubeStoreReducer = createReducer(
   })),
   on(SearchActions.searchLoadingAction, state => ({
     ...state,
-    loading: true, // Počinje učitavanje videa
+    loading: true,
     error:false
   })),
   on(SearchActions.searchErrorAction, (state) => ({ 

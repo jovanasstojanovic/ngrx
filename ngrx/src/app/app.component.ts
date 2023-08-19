@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NameSharingService } from './service/name-sharing.service';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +7,12 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private nameService: NameSharingService, private router: Router) {}
+  title = 'myApp';
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        const name = this.nameService.getCurrentName();
-        this.nameService.setCurrentName(name);
-      }
-    });
+    this.router.events.subscribe();
   }
-  
-  title = 'myApp';
+
 }
