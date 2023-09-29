@@ -53,7 +53,7 @@
 }
 
 .container {
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-top: 5vh;
     width: 94vw;
     display: grid;
@@ -88,19 +88,6 @@
     
 }
 
-.list {
-    list-style-type: none;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1;
-    padding-inline-start: 0;
-    padding: 5%;
-    color: #00ffe199;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.7vh;
-
-}
 
 .mid {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
@@ -113,22 +100,13 @@
     width: 14vw;
 }
 
-.numberSpan {
-    font-size: 1.8vh;
-    font-weight: bolder;
-    color: #00ffe0;
-}
+
 
 .title{
     width: 30vw;
 }
 
-.topList{
-    width: 100%;
-    height: 90vh;
-    background-color: #34205ec2;
-    box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.508);
-}
+
 
 .welcome{
     padding-top: 4%;

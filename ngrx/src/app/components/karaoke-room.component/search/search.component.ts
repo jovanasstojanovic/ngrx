@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit,OnChanges{
   constructor(private domSanitizer: DomSanitizer){}
   
   ngOnInit(): void {
-    console.log("ovde sam");
+    //console.log("ovde sam");
   }
 
   ngOnChanges(changes: SimpleChanges): void {

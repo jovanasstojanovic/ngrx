@@ -1,0 +1,239 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "guessed": "1",
+      "playlist": "My Heart Will Go On [Celine Dion], Livin' On A Prayer [Bon Jovi], Eye Of The Tiger [Survivor], Oops I Did It Again [Britney Spears], Snap Yo Fingers [Lil Jon]"
+    },
+    {
+      "id": 2,
+      "guessed": "2",
+      "playlist": "Buttons [Pussycat Dolls], My Milkshake [Kelis], Loose Yourself [Eminem], Low [Flo Rida], Temperature [Sean Paul]"
+    },
+    {
+      "id": 3,
+      "guessed": "3",
+      "playlist": "Wrecking Ball [Miley Cyrus], Mirrors [Justin Timberlake], Roar [Katty Perry], Starboy [The Weekend], Unholy [Sam Smith]"
+    }
+  ],
+  "continueLyrics": [
+    {
+      "o1": "when you drink alcohol",
+      "o2": "don't go around breaking young girls' hearts",
+      "o3": "always have someone by your side",
+      "id": 1,
+      "song": "People always told me be careful of what you do . . .",
+      "solution": "don't go around breaking young girls' hearts"
+    },
+    {
+      "o1": "Life in plastic, it's fantastic",
+      "o2": "Let's be plastic, life is fantastic",
+      "o3": "Enthusiastic, not sarcastic",
+      "id": 2,
+      "song": "I'm a Barbie girl in a Barbie world . . .",
+      "solution": "Life in plastic, it's fantastic"
+    },
+    {
+      "o1": "Oh, boys, They wanna have fu-un",
+      "o2": "Oh, guys, They wanna have fu-un",
+      "o3": "Oh, girls, They wanna have fu-un",
+      "id": 3,
+      "song": "When the working day is done . . .",
+      "solution": "Oh, boys, They wanna have fu-un"
+    },
+    {
+      "o1": "Leave the winter on the ground",
+      "o2": "From the moment we touched, 'til the time had run out",
+      "o3": "It must have been good, but I lost it somehow",
+      "id": 4,
+      "song": "It must have been love, but it's over now . . .",
+      "solution": "It must have been good, but I lost it somehow"
+    }
+  ],
+  "guessArtist": [
+    {
+      "o1": "Taylor Swift",
+      "o2": "Selena Gomez",
+      "o3": "Bella Thorne",
+      "id": 1,
+      "song": "Shake It Off",
+      "solution": "Taylor Swift"
+    },
+    {
+      "o1": "BTS",
+      "o2": "PSY",
+      "o3": "Fifty Fifty",
+      "id": 2,
+      "song": "Gangnam Style",
+      "solution": "PSY"
+    },
+    {
+      "o1": "Nelly Furtado",
+      "o2": "Nelly",
+      "o3": "Kelly Rowland",
+      "id": 3,
+      "song": "Hot in Here",
+      "solution": "Nelly"
+    },
+    {
+      "o1": "Alicia Keys",
+      "o2": "Beyonce",
+      "o3": "Amy Winehouse",
+      "id": 4,
+      "song": "Back to Black",
+      "solution": "Amy Winehouse"
+    }
+  ],
+  "artistPhoto": [
+    {
+      "o1": "One Direction",
+      "o2": "BTS",
+      "o3": "Stray Kids",
+      "id": 1,
+      "url": "1.jpg",
+      "solution": "BTS"
+    },
+    {
+      "o1": "Olivia Rodrigo",
+      "o2": "Camila Cabello",
+      "o3": "Lele Pons",
+      "id": 2,
+      "url": "2.jpg",
+      "solution": "Olivia Rodrigo"
+    },
+    {
+      "o1": "Rita Ora",
+      "o2": "Dua Lipa",
+      "o3": "Bebe Rexha",
+      "id": 3,
+      "url": "3.jpeg",
+      "solution": "Dua Lipa"
+    },
+    {
+      "o1": "Ed Sheeran",
+      "o2": "Louis Tomlinson",
+      "o3": "Zayn Malik",
+      "id": 4,
+      "url": "4.jpg",
+      "solution": "Zayn Malik"
+    }
+  ],
+  "videos": [
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 2
+    },
+    {
+      "name": "Karaoke- Super Bowl by Stray Kids",
+      "id": 3
+    },
+    {
+      "name": "Teodora x MC Stojan - Voli me, voli me (Karaoke /Instrumental)",
+      "id": 4
+    },
+    {
+      "name": "Deda Mraze ne skreci sa staze + karaoke 🎅 Bozicne pesme za decu | HeyKids",
+      "id": 5
+    },
+    {
+      "name": "DEVITO - TU TU TU (FEAT. BRESKVICA) {INSTRUMENTAL/KARAOKE}",
+      "id": 6
+    },
+    {
+      "name": "MILE VOLI DISKO Brena",
+      "id": 7
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 8
+    },
+    {
+      "name": "Karaoke- Super Bowl by Stray Kids",
+      "id": 9
+    },
+    {
+      "name": "Teodora x MC Stojan - Voli me, voli me (Karaoke /Instrumental)",
+      "id": 10
+    },
+    {
+      "name": "Karaoke- Super Bowl by Stray Kids",
+      "id": 11
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 12
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 13
+    },
+    {
+      "name": "[Karaoke Ver.] BTS (방탄소년단) &quot;Butter&quot; || 8 Members Ver. (You as member)",
+      "id": 14
+    },
+    {
+      "name": "[Karaoke Ver.] BTS (방탄소년단) &quot;Butter&quot; || 8 Members Ver. (You as member)",
+      "id": 15
+    },
+    {
+      "name": "[Karaoke Ver.] BTS (방탄소년단) &quot;Butter&quot; || 8 Members Ver. (You as member)",
+      "id": 16
+    },
+    {
+      "name": "Karaoke- Super Bowl by Stray Kids",
+      "id": 17
+    },
+    {
+      "name": "Teodora x MC Stojan - Voli me, voli me (Karaoke /Instrumental)",
+      "id": 18
+    },
+    {
+      "name": "Karaoke- Super Bowl by Stray Kids",
+      "id": 19
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 20
+    },
+    {
+      "name": "Lepa Brena - Mile voli disko - (Audio 1995) HD",
+      "id": 21
+    },
+    {
+      "name": "Zvončići, zvončići ☃️ Novogodišnje pesme za decu 🎄 HeyKids",
+      "id": 22
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 23
+    },
+    {
+      "name": "LEPA BRENA - PERICE, MOJA MERICE - MATRICA + BACK VOCALS",
+      "id": 24
+    },
+    {
+      "name": "LEPA BRENA - PERICE, MOJA MERICE - MATRICA + BACK VOCALS",
+      "id": 25
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 26
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 27
+    },
+    {
+      "name": "Baja Mali Knindza - Ne volim te Alija - (Audio 1993) HD",
+      "id": 28
+    },
+    {
+      "name": "Goga Sekulic - Moze moze - (Audio 2006) HD",
+      "id": 29
+    },
+    {
+      "name": "Teodora x MC Stojan - Voli me, voli me (Karaoke /Instrumental)",
+      "id": 30
+    }
+  ]
+}

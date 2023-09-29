@@ -7,7 +7,7 @@
         </div>
 
         <div class="homeDiv">
-            <button class="buttonBack" routerLink="/">
+            <button class="buttonBack" (click)="goToHome()">
                 HOME
             </button>
         </div>
@@ -37,6 +37,16 @@
     </div>
 
     <div class="searchDiv">
+        <button class="playlistButton" [ngClass]="{ 'active': isOpen }" (click)="toggleDropdown()">
+            CHECK OUT <span style="color: white;">OUR</span> <span style="font-weight: bold;"> PLAYLIST</span>
+        </button>
+        <div class="dropdown-content" [ngClass]="{ 'active': isOpen }" >
+            <table class="table" *ngIf="isOpen">
+                <tr *ngFor="let name of videoNames">
+                    <td class="song" (click)="search(name)">{{ name }}</td>
+                </tr>
+            </table>
+        </div>
         <img class="songNameImg" src="../../../../assets/songName.png" alt="nesto">
 
         <img class="arrow2Img" src="../../../../assets/arrow2.png" alt="nesto">

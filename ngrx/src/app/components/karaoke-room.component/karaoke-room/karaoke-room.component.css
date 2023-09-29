@@ -16,6 +16,7 @@
     opacity: 0.8;
     border: none;
     height: 90vh;
+    
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.463);
 }
 
@@ -27,7 +28,7 @@
     background: #211836;
     color: white;
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 1.3em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
@@ -37,7 +38,7 @@
 .buttonBack:hover {
     border: 1px solid #00ffe0;
     color: #00ffe0;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     box-shadow: 0 0 20px #00ffe0;
 }
 
@@ -53,8 +54,8 @@
 
 .dots {
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height:25px;
+    width: 25px;
     background: rgba(255, 255, 255, 0.654);
     border-radius: 50%;
     transform: rotate(calc(var(--i)*(360deg/15))) translateY(90px);
@@ -83,6 +84,7 @@
     justify-content: center;
     align-items: center;
     background-color: #211836;
+    padding: 1vh;
     height: 10vh;
 }
 
@@ -153,12 +155,44 @@ input::placeholder {
     background: #211836;
     color: white;
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 1.3em;
     letter-spacing: 0.1em;
     font-weight: 400;
     padding: 10px 30px;
     transition: 0.5s;
 }
+
+.playlistButton{
+    background-color: #211836;
+    margin: 5%;
+    margin-bottom: 10%;
+        border: 3px solid #00ffe0;
+        cursor: pointer;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        
+        color: #00ffe0;
+        text-decoration: none;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        font-weight: 400;
+        padding: 5px 15px;
+        transition: 0.5s;
+}
+.playlistButton.active{
+    border: 1px solid #00ffe0;
+        color: #00ffe0;
+        background-color: #211836;
+        letter-spacing: 0.1em;
+        box-shadow: 0 0 20px #00ffe0;
+}
+ .playlistButton:hover {
+     border: 1px solid #00ffe0;
+     color: #00ffe0;
+     background-color: #211836;
+     letter-spacing: 0.1em;
+     box-shadow: 0 0 20px #00ffe0;
+ }
 
 .searchButton:hover {
     border: 1px solid #00ffe0;
@@ -178,6 +212,46 @@ input::placeholder {
     height: 90vh;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.463);
 }
+.song{
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    margin:10px;
+    padding: 5%;
+    border-bottom: 1px solid #211836;
+    
+}
+.table{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.song:hover{
+    border:1px solid #00ffe0;
+    box-shadow: 0 0 20px #00ffe0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dropdown-content {
+    background-color: aliceblue;
+    position: absolute;
+    top: 35%;
+    left: 82%;
+    display: none;
+    z-index: 2;
+    width:16.5%;
+    padding-right: 3px;
+    max-height: 55vh;
+        /* Postavite maksimalnu visinu prema vašim potrebama */
+        overflow-y: auto;
+    /* Početno sakrivanje dropdown-a */
+    /* Dodajte ostale stilove za izgled dropdown-a */
+}
+
+.dropdown-content.active {
+    display: block;
+    /* Prikazivanje dropdown-a kada je aktivan */
+}
 
 .searchImg {
     height: 4vh;
@@ -194,7 +268,7 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
-    height: 85vh;
+    height: 83vh;
     background-image: url('../../../../assets/music.png');
     background-size: cover;
     background-repeat: no-repeat;

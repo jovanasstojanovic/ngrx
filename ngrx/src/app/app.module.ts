@@ -17,10 +17,10 @@ import { SearchComponent } from './components/karaoke-room.component/search/sear
 import { YouTubeStoreEffects } from './store/you-tube-store/you-tube-store.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { youTubeStoreReducer } from './store/you-tube-store/you-tube-store.reducer';
-import { videoNamesReducer } from './store/video-names-store/video-name.reducer';
-
-
-
+import { videoNamesReducer } from './store/video-names-store/video-names.reducer';
+import { VideoNamesEffects } from './store/video-names-store/video-names.effects';
+import { QuizComponent } from './components/home/quiz/quiz.component';
+import { TopListComponent } from './components/home/top-list/top-list.component';
 
 @NgModule({
   declarations: [
@@ -28,21 +28,27 @@ import { videoNamesReducer } from './store/video-names-store/video-name.reducer'
     HomeComponent,
     KaraokeRoomComponent,
     SearchComponent,
+    QuizComponent,
+    TopListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      videoId:youTubeStoreReducer,
-      videoNames: videoNamesReducer
+      videoId: youTubeStoreReducer,
+      videoNames: videoNamesReducer,
     }),
-    StoreRouterConnectingModule.forRoot(),
-    EffectsModule.forRoot([YouTubeStoreEffects]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     FormsModule,
-    HttpClientModule
+    StoreRouterConnectingModule.forRoot(),
+    EffectsModule.forRoot([YouTubeStoreEffects, VideoNamesEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

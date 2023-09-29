@@ -1,17 +1,5 @@
 <div class="container">
-    <div class="topList">
-        <ul class="list">
-            <ng-container *ngFor="let video of trendingVideos; let i = index">
-                <li *ngIf="i < 10">
-                    <span class="numberSpan">
-                        {{ i + 1 }}#
-                    </span> 
-                    
-                    {{ video.snippet.title }}
-                </li>
-            </ng-container>
-        </ul>
-    </div>
+    <app-top-list></app-top-list>
 
     <div class="mid">
         <div class="welcome">
@@ -37,17 +25,6 @@
         </div>
     </div>
 
-    <div class="topList">.
-        <ul class="list">
-            <ng-container *ngFor="let video of trendingVideos; let i = index">
-                <li *ngIf="i >= 10">
-                    <span class="numberSpan">
-                        {{ i + 1 }}#
-                    </span> 
-                    
-                    {{ video.snippet.title }}
-                </li>
-            </ng-container>
-        </ul>
-    </div>
+        <app-quiz></app-quiz>
+        
 </div>
